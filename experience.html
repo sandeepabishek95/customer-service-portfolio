@@ -1,1 +1,335 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08111F">
+<meta name="description" content="Professional experience of Sandeep Abishek in application support, production support, incident management and customer service.">
+<title>Experience | Sandeep Abishek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08111F;
+  --panel: #101D2E;
+  --panel2: #132238;
+  --gold: #D9B779;
+  --text: #F4F1EA;
+  --muted: #A8B2C1;
+  --line: rgba(217,183,121,.22);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1120px, 90%); margin: auto; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,17,31,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  min-height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.brand { font-weight: 700; letter-spacing: .4px; }
+.brand span { color: var(--gold); }
+nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav a { color: var(--muted); font-size: 13px; transition: .2s; }
+nav a:hover, nav a.active { color: var(--gold); }
+.hero { padding: 90px 0 55px; }
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h1, h2, h3 { line-height: 1.2; }
+h1, h2 { font-family: 'Playfair Display', serif; }
+h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 500;
+  margin: 18px 0;
+  max-width: 900px;
+}
+h1 span { color: var(--gold); }
+.intro { max-width: 700px; color: var(--muted); font-size: 17px; }
+.section { padding: 45px 0 85px; }
+.section-heading { margin-bottom: 30px; }
+.section-heading h2 { font-size: clamp(30px, 4vw, 43px); margin: 10px 0; }
+.section-heading p { color: var(--muted); max-width: 700px; }
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--line);
+}
+.job { position: relative; margin-bottom: 35px; }
+.job::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px rgba(217,183,121,.10);
+}
+.job-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--panel), rgba(16,29,46,.58));
+}
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.job h3 { font-size: 24px; margin: 8px 0; }
+.company { color: var(--gold); font-weight: 600; }
+.meta { color: var(--muted); font-size: 13px; }
+.period {
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 7px 12px;
+  color: var(--gold);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.job-card > p { color: var(--muted); }
+.job-card ul { padding-left: 20px; color: var(--muted); }
+.job-card li { margin: 9px 0; padding-left: 5px; }
+.job-card li::marker { color: var(--gold); }
+.tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.tag {
+  border: 1px solid var(--line);
+  color: #E7D4AE;
+  border-radius: 30px;
+  padding: 7px 11px;
+  font-size: 11px;
+}
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.metric {
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 16px;
+}
+.metric strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  color: var(--gold);
+  font-weight: 500;
+}
+.metric span { color: var(--muted); font-size: 13px; }
+.banner {
+  margin-top: 45px;
+  padding: 30px;
+  background: var(--panel2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+}
+.banner p { color: var(--muted); margin-bottom: 0; }
+.cta {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 19px;
+  background: var(--gold);
+  color: #08111F;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 13px;
+}
+footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: 12px; }
+.footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .nav { align-items: flex-start; flex-direction: column; padding: 17px 0; gap: 12px; }
+  nav { gap: 12px 16px; }
+  .hero { padding-top: 60px; }
+  .job-card { padding: 23px; }
+  .timeline { padding-left: 25px; }
+  .job::before { left: -26px; }
+  .period { white-space: normal; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">SANDEEP <span>ABISHEK</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="expertise.html">Expertise</a>
+      <a class="active" href="experience.html">Experience</a>
+      <a href="approach.html">My Approach</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="eyebrow">My professional journey</div>
+    <h1>Experience built on <span>service, ownership</span> and problem-solving.</h1>
+    <p class="intro">
+      Over eight years of professional experience across support operations,
+      application troubleshooting and customer-focused service. My approach
+      combines clear communication with structured investigation and follow-through.
+    </p>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-heading">
+      <div class="eyebrow">Career history</div>
+      <h2>Where I've made an impact</h2>
+      <p>My most recent role focused on supporting business-critical applications,
+      coordinating incident resolution and helping users maintain continuity.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="job">
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <div class="company">CorroHealth</div>
+              <h3>Application Support Engineer</h3>
+              <div class="meta">Healthcare technology · Application & production support</div>
+            </div>
+            <div class="period">Sep 2023 – Sep 2026</div>
+          </div>
+
+          <p>
+            Supported business-critical applications and operational users,
+            helping manage incidents, troubleshoot issues and coordinate
+            resolution across support teams.
+          </p>
+
+          <ul>
+            <li>Handled application support requests and incidents, working to meet established SLAs and service commitments.</li>
+            <li>Investigated reported issues, gathered relevant information and followed structured troubleshooting procedures.</li>
+            <li>Participated in incident management, problem management and root cause analysis activities.</li>
+            <li>Coordinated with business users and relevant technical teams during priority incidents.</li>
+            <li>Supported proactive monitoring and preventive maintenance to reduce recurring issues.</li>
+            <li>Maintained ticket updates, technical documentation and knowledge resources to support consistent service delivery.</li>
+            <li>Assisted with user access, application configuration and system-related troubleshooting in line with approved procedures.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Application Support</span>
+            <span class="tag">Incident Management</span>
+            <span class="tag">RCA</span>
+            <span class="tag">SLA Management</span>
+            <span class="tag">Ticket Governance</span>
+            <span class="tag">Healthcare Technology</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <div class="company">Earlier Professional Experience</div>
+              <h3>Support & Service Operations</h3>
+              <div class="meta">Customer assistance · Technical troubleshooting · User support</div>
+            </div>
+            <div class="period">Previous roles</div>
+          </div>
+
+          <p>
+            My broader professional background includes supporting users,
+            responding to service requests, documenting issues and working
+            with teams to provide dependable customer and technical support.
+          </p>
+
+          <ul>
+            <li>Communicated with users to understand requests and clarify the issue before troubleshooting.</li>
+            <li>Prioritised tasks based on impact, urgency and service requirements.</li>
+            <li>Provided clear updates and escalated unresolved issues with relevant details.</li>
+            <li>Followed documented processes and maintained accurate support records.</li>
+          </ul>
+
+          <p class="meta">
+            For an accurate employer-by-employer history, add the company names,
+            job titles and dates from your CV here.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-heading" style="margin-top:65px">
+      <div class="eyebrow">My working strengths</div>
+      <h2>What I bring to a support team</h2>
+    </div>
+
+    <div class="grid">
+      <div class="metric">
+        <strong>8+ Years</strong>
+        <span>Professional experience in support and service operations</span>
+      </div>
+      <div class="metric">
+        <strong>L1 / L2</strong>
+        <span>Structured user support and troubleshooting</span>
+      </div>
+      <div class="metric">
+        <strong>End-to-end</strong>
+        <span>Incident tracking, communication and resolution follow-through</span>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div class="eyebrow">The next chapter</div>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:500;margin:12px 0">
+        Ready to contribute to a customer-focused team.
+      </h2>
+      <p>
+        I am exploring opportunities in customer support, service desk,
+        IT support and application support in the UAE.
+      </p>
+      <a class="cta" href="contact.html">Connect with me →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Sandeep Abishek</span>
+    <span>Customer Experience · Technical Support · Service Delivery</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
