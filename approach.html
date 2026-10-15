@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#06101E">
 <meta name="description" content="Sandeep Abishek's approach to customer experience, communication, technical troubleshooting and service delivery.">
 <title>My Approach | Sandeep Abishek</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root {
   --bg: #06101e;
@@ -18,69 +17,82 @@
   --muted: #aab7ca;
   --line: rgba(225,183,111,.38);
 }
-
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
 body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
   font-family: 'DM Sans', sans-serif;
   line-height: 1.7;
+  overflow-wrap: break-word;
 }
-
-a { color: inherit; text-decoration: none; }
-
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 .wrap {
   width: min(1260px, 90%);
-  margin: auto;
+  margin-inline: auto;
 }
-
-/* Navigation */
+/* NAVIGATION */
 header {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: rgba(5,14,27,.90);
+  z-index: 100;
+  background: rgba(5,14,27,.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255,255,255,.10);
 }
-
 .nav {
   min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 22px;
 }
-
 .brand {
+  flex: 0 0 auto;
   font-size: 17px;
+  font-weight: 700;
   letter-spacing: 1.5px;
   white-space: nowrap;
 }
-
 .brand span { color: var(--gold); }
-
 nav {
   display: flex;
-  flex-wrap: wrap;
+  flex: 0 1 auto;
+  align-items: center;
   justify-content: flex-end;
-  gap: 25px;
+  flex-wrap: nowrap;
+  gap: clamp(12px, 1.6vw, 20px);
+  min-width: 0;
 }
-
 nav a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  white-space: nowrap;
+  padding-block: 8px;
   color: #c4cedc;
   font-size: 13px;
-  transition: color .2s;
+  transition: color .2s ease;
 }
-
 nav a:hover,
-nav a.active { color: var(--gold); }
-
-/* Hero and visible background portrait */
+nav a.active {
+  color: var(--gold);
+}
+nav a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+/* HERO AND PORTRAIT */
 .hero {
   position: relative;
   isolation: isolate;
@@ -89,7 +101,6 @@ nav a.active { color: var(--gold); }
   align-items: center;
   padding: 65px 0 55px;
 }
-
 .hero::before {
   content: "";
   position: absolute;
@@ -116,7 +127,6 @@ nav a.active { color: var(--gold); }
     black 100%
   );
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -137,12 +147,10 @@ nav a.active { color: var(--gold); }
       rgba(6,16,30,.05) 100%
     );
 }
-
 .hero-content {
   max-width: 760px;
   position: relative;
 }
-
 .eyebrow {
   color: var(--gold);
   font-size: 11px;
@@ -150,51 +158,43 @@ nav a.active { color: var(--gold); }
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   line-height: 1.2;
 }
-
 h1 {
   font-size: clamp(43px, 6.4vw, 78px);
   letter-spacing: -1.5px;
   margin: 15px 0 20px;
 }
-
 h1 span { color: var(--gold); }
-
 .intro {
   max-width: 680px;
   color: var(--muted);
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.8;
 }
-
-/* Glass cards */
+/* GLASS CARDS */
 .section { padding: 15px 0 75px; }
 .heading { margin: 30px 0 27px; }
-
 h2 {
   font-size: clamp(30px, 4vw, 43px);
   margin: 10px 0;
 }
-
 .heading p {
   color: var(--muted);
   max-width: 700px;
   margin-top: 8px;
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
-
 .card {
   position: relative;
+  min-width: 0;
   overflow: hidden;
   padding: 25px;
   border: 1px solid var(--line);
@@ -211,12 +211,10 @@ h2 {
   -webkit-backdrop-filter: blur(16px);
   transition: transform .25s, border-color .25s;
 }
-
 .card:hover {
   transform: translateY(-4px);
   border-color: rgba(225,183,111,.7);
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -229,14 +227,12 @@ h2 {
   );
   opacity: .8;
 }
-
 .card-top {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 18px;
 }
-
 .icon {
   width: 54px;
   height: 54px;
@@ -248,50 +244,43 @@ h2 {
   color: var(--gold);
   font-size: 17px;
 }
-
 .number {
   color: var(--gold);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 2px;
 }
-
 .card h3 {
   font-size: 23px;
   margin: 4px 0 12px;
 }
-
 .card p {
   color: var(--muted);
   font-size: 14px;
   margin-bottom: 0;
 }
-
-/* Resolution process */
+/* RESOLUTION PROCESS */
 .process {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 15px;
 }
-
 .stage {
+  min-width: 0;
   padding: 22px;
   border: 1px solid rgba(225,183,111,.24);
   border-radius: 15px;
   background: rgba(14,29,48,.72);
 }
-
 .stage h3 {
   font-size: 21px;
   margin: 12px 0 7px;
 }
-
 .stage p {
   color: var(--muted);
   font-size: 13px;
 }
-
-/* Quote */
+/* QUOTE */
 .quote {
   margin: 38px 0 55px;
   padding: 28px 30px;
@@ -304,16 +293,14 @@ h2 {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
-
 .quote-mark {
+  flex: 0 0 auto;
   color: var(--gold);
   font-family: Georgia, serif;
   font-size: 65px;
   line-height: 1;
 }
-
-.quote-content { flex: 1; }
-
+.quote-content { flex: 1; min-width: 0; }
 .quote p {
   font-family: 'Playfair Display', serif;
   font-size: clamp(20px, 3vw, 29px);
@@ -321,24 +308,20 @@ h2 {
   line-height: 1.45;
   margin: 0 0 12px;
 }
-
 .quote span {
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--gold);
   text-transform: uppercase;
 }
-
-/* Difficult situations */
+/* DIFFICULT SITUATIONS */
 .difficult-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 17px;
 }
-
 .difficult-grid .card h3 { font-size: 22px; }
-
-/* Contact banner */
+/* CONTACT BANNER */
 .banner {
   margin-top: 45px;
   padding: 32px;
@@ -350,9 +333,7 @@ h2 {
     rgba(9,23,40,.8)
   );
 }
-
 .banner p { color: var(--muted); }
-
 .btn {
   display: inline-block;
   margin-top: 12px;
@@ -364,61 +345,86 @@ h2 {
   font-weight: 700;
   transition: transform .2s;
 }
-
 .btn:hover { transform: translateY(-2px); }
-
-/* Footer */
+/* FOOTER */
 footer {
   border-top: 1px solid rgba(255,255,255,.10);
   padding: 24px 0;
   color: var(--muted);
   font-size: 12px;
 }
-
 .foot {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
 }
-
-/* Tablet */
-@media (max-width: 900px) {
+/* TABLETS AND SMALL LAPTOPS */
+@media (max-width: 1000px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 15px 0;
+    gap: 18px;
   }
-
-  nav { gap: 15px; }
-
+  nav {
+    gap: 13px;
+  }
+  nav a {
+    font-size: 11px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .hero::before {
     width: 85%;
     right: -5%;
     opacity: .55;
   }
-
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-/* Mobile */
-@media (max-width: 560px) {
-  .wrap { width: 90%; }
-
+/* MOBILE NAVIGATION */
+@media (max-width: 760px) {
+  .nav {
+    min-height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 0 10px;
+    gap: 8px;
+  }
+  nav {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 1px 10px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 5px 0;
+  }
   .hero {
     min-height: 470px;
     padding: 55px 0 45px;
   }
-
   .hero::before {
     width: 100%;
     right: -5%;
     opacity: .48;
-    filter: saturate(.9) brightness(1.08);
     background-position: 56% center;
   }
-
   .hero::after {
     background: linear-gradient(
       90deg,
@@ -427,34 +433,77 @@ footer {
       rgba(6,16,30,.30) 100%
     );
   }
-
   .grid,
   .process,
   .difficult-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
-
   .card { padding: 23px; }
-
   .quote {
     align-items: flex-start;
     padding: 22px;
     gap: 12px;
   }
-
   .quote-mark { font-size: 45px; }
   .banner { padding: 24px; }
 }
-
+/* SMALL PHONES */
+@media (max-width: 560px) {
+  .wrap { width: 90%; }
+  .hero {
+    min-height: 440px;
+    padding: 45px 0;
+  }
+  h1 {
+    font-size: clamp(36px, 9.5vw, 52px);
+    letter-spacing: -1px;
+  }
+  h2 { font-size: clamp(28px, 7.5vw, 36px); }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+  .section { padding: 15px 0 55px; }
+  .heading { margin: 25px 0 22px; }
+  .card { padding: 21px; }
+  .card h3 { font-size: 21px; }
+  .quote {
+    margin: 30px 0 40px;
+    padding: 20px;
+  }
+  .quote p { font-size: 21px; }
+  .banner {
+    padding: 22px;
+    margin-top: 35px;
+  }
+  .foot {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* EXTRA SMALL PHONES */
+@media (max-width: 360px) {
+  .wrap { width: 92%; }
+  nav { gap: 17px; }
+  nav a { font-size: 11px; }
+  .card,
+  .stage { padding: 18px; }
+  .quote { padding: 18px; }
+  .banner { padding: 19px; }
+}
+/* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    transition: none !important;
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 </style>
 </head>
-
 <body>
 <header>
   <div class="wrap nav">
@@ -464,12 +513,11 @@ footer {
       <a href="about.html">About</a>
       <a href="expertise.html">Expertise</a>
       <a href="experience.html">Experience</a>
-      <a class="active" href="approach.html">My Approach</a>
+      <a class="active" href="approach.html" aria-current="page">My Approach</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
-
 <main>
   <section class="hero wrap">
     <div class="hero-content">
@@ -482,7 +530,6 @@ footer {
       </p>
     </div>
   </section>
-
   <section class="section wrap">
     <div class="grid">
       <article class="card">
@@ -497,7 +544,6 @@ footer {
           the right solution.
         </p>
       </article>
-
       <article class="card">
         <div class="card-top">
           <div class="icon">02</div>
@@ -509,7 +555,6 @@ footer {
           when needed. I keep the customer informed throughout the process.
         </p>
       </article>
-
       <article class="card">
         <div class="card-top">
           <div class="icon">03</div>
@@ -523,7 +568,6 @@ footer {
         </p>
       </article>
     </div>
-
     <div class="quote">
       <div class="quote-mark">“</div>
       <div class="quote-content">
@@ -531,70 +575,59 @@ footer {
         <span>Sandeep Abishek · Customer Support Professional</span>
       </div>
     </div>
-
     <div class="heading">
       <div class="eyebrow">My resolution process</div>
       <h2>From first contact to a clear outcome</h2>
       <p>A structured process helps me remain calm, organised and customer-focused, even when a request is urgent.</p>
     </div>
-
     <div class="process">
       <article class="stage">
         <div class="number">STEP 01</div>
         <h3>Understand</h3>
         <p>Listen to the concern, clarify the symptoms and establish the impact on the user or business.</p>
       </article>
-
       <article class="stage">
         <div class="number">STEP 02</div>
         <h3>Investigate</h3>
         <p>Gather evidence, check relevant systems and follow an appropriate troubleshooting process.</p>
       </article>
-
       <article class="stage">
         <div class="number">STEP 03</div>
         <h3>Act &amp; Communicate</h3>
         <p>Apply an approved solution where possible, or escalate with clear notes and regular updates.</p>
       </article>
-
       <article class="stage">
         <div class="number">STEP 04</div>
         <h3>Confirm &amp; Document</h3>
         <p>Confirm the outcome with the user, update the ticket and record useful lessons for future reference.</p>
       </article>
     </div>
-
     <div class="heading" style="margin-top:60px">
       <div class="eyebrow">When situations get difficult</div>
       <h2>Calm, structured and professional</h2>
     </div>
-
     <div class="difficult-grid">
       <article class="card">
         <div class="number">WHEN A CUSTOMER IS FRUSTRATED</div>
         <h3>Show empathy and listen</h3>
         <p>I allow the customer to explain the concern, acknowledge the impact and avoid making promises before understanding what can realistically be done.</p>
       </article>
-
       <article class="card">
         <div class="number">WHEN A PROBLEM IS UNRESOLVED</div>
         <h3>Escalate with context</h3>
         <p>I document the symptoms, checks performed, impact and relevant evidence so the next team can continue the investigation without unnecessary repetition.</p>
       </article>
-
       <article class="card">
         <div class="number">WHEN PRIORITIES COMPETE</div>
         <h3>Focus on impact</h3>
         <p>I consider urgency, business impact and service commitments, communicate expectations and seek guidance when priorities conflict.</p>
       </article>
-
       <article class="card">
         <div class="number">WHEN AN ISSUE REPEATS</div>
         <h3>Look beyond the symptom</h3>
         <p>I review previous incidents and documented findings, then support root cause investigation and preventive actions where appropriate.</p>
       </article>
     </div>
-
     <div class="banner">
       <div class="eyebrow">Let's connect</div>
       <h2>Support with a human touch and a professional mindset.</h2>
@@ -603,14 +636,12 @@ footer {
     </div>
   </section>
 </main>
-
 <footer>
   <div class="wrap foot">
     <span>© <span id="year"></span> Sandeep Abishek</span>
     <span>Customer Experience · Technical Support · Service Delivery</span>
   </div>
 </footer>
-
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
