@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08111F">
+<meta name="description" content="Sandeep Abishek's approach to customer experience, communication, technical troubleshooting and service delivery.">
+<title>My Approach | Sandeep Abishek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08111F;--panel:#101D2E;--panel2:#132238;--gold:#D9B779;--text:#F4F1EA;--muted:#A8B2C1;--line:rgba(217,183,121,.22)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(8,17,31,.96);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.brand{font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.brand span,h1 span,.gold{color:var(--gold)}
+nav{display:flex;flex-wrap:wrap;gap:16px}
+nav a{font-size:12px;color:var(--muted)}
+nav a:hover,nav a.active{color:var(--gold)}
+.hero{padding:85px 0 55px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+h1,h2{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2}
+h1{font-size:clamp(42px,7vw,72px);max-width:900px;margin:18px 0}
+h1 span{color:var(--gold)}
+.intro{max-width:730px;color:var(--muted);font-size:17px}
+.section{padding:35px 0 80px}
+.heading{margin-bottom:28px}
+h2{font-size:clamp(30px,4vw,42px);margin:12px 0}
+.heading p{color:var(--muted);max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{padding:28px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,var(--panel),#0B1727)}
+.number{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:700}
+.card h3{font-size:21px;margin:12px 0}
+.card p{font-size:14px;color:var(--muted)}
+.icon{width:43px;height:43px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;color:var(--gold);font-size:19px;margin-bottom:20px}
+.process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stage{padding:22px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}
+.stage .number{font-size:12px}
+.stage h3{margin:13px 0 7px}
+.stage p{font-size:13px;color:var(--muted)}
+.quote{margin:50px 0;padding:35px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(120deg,#132238,#0D192A)}
+.quote p{font-family:'Playfair Display',serif;font-size:clamp(23px,4vw,34px);line-height:1.5;margin:10px 0}
+.quote span{font-size:12px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+.banner{padding:30px;background:var(--panel2);border-left:3px solid var(--gold);border-radius:0 14px 14px 0}
+.banner p{color:var(--muted)}
+.btn{display:inline-block;margin-top:12px;padding:12px 18px;background:var(--gold);color:#08111F;border-radius:7px;font-size:13px;font-weight:700}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:12px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:16px 0}.hero{padding-top:55px}.grid{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:23px}}
+@media(max-width:420px){.process{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="index.html">SANDEEP <span>ABISHEK</span></a>
+  <nav aria-label="Main navigation">
+   <a href="index.html">Home</a>
+   <a href="about.html">About</a>
+   <a href="expertise.html">Expertise</a>
+   <a href="experience.html">Experience</a>
+   <a class="active" href="approach.html">My Approach</a>
+   <a href="contact.html">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+ <section class="hero wrap">
+  <div class="eyebrow">How I work</div>
+  <h1>Every issue deserves <span>clarity, ownership</span> and care.</h1>
+  <p class="intro">Good support is more than answering a question or closing a ticket. It is about understanding the person behind the request, communicating honestly, investigating carefully and following through until the next step is clear.</p>
+ </section>
+
+ <section class="section wrap">
+  <div class="heading">
+   <div class="eyebrow">My principles</div>
+   <h2>The values behind my work</h2>
+   <p>The way I approach each interaction is guided by a few simple principles.</p>
+  </div>
+
+  <div class="grid">
+   <article class="card">
+    <div class="icon">01</div>
+    <div class="number">PEOPLE FIRST</div>
+    <h3>Listen before solving</h3>
+    <p>I start by understanding the customer's concern, asking relevant questions and confirming the impact. This helps me focus on the actual problem instead of making assumptions.</p>
+   </article>
+
+   <article class="card">
+    <div class="icon">02</div>
+    <div class="number">CLEAR COMMUNICATION</div>
+    <h3>Make the next step clear</h3>
+    <p>I explain information in straightforward language, set realistic expectations and provide updates so customers know what is happening and what to expect next.</p>
+   </article>
+
+   <article class="card">
+    <div class="icon">03</div>
+    <div class="number">OWNERSHIP</div>
+    <h3>Follow through</h3>
+    <p>I track the request, keep records updated and make sure escalations include useful details. Even when another team must resolve an issue, communication remains important.</p>
+   </article>
+
+   <article class="card">
+    <div class="icon">04</div>
+    <div class="number">CONTINUOUS IMPROVEMENT</div>
+    <h3>Learn from every issue</h3>
+    <p>I document useful findings, look for recurring patterns and support knowledge sharing to make future troubleshooting more consistent and efficient.</p>
+   </article>
+  </div>
+
+  <div class="heading" style="margin-top:65px">
+   <div class="eyebrow">My resolution process</div>
+   <h2>From first contact to a clear outcome</h2>
+   <p>A structured process helps me remain calm, organised and customer-focused, even when a request is urgent.</p>
+  </div>
+
+  <div class="process">
+   <article class="stage">
+    <div class="number">STEP 01</div>
+    <h3>Understand</h3>
+    <p>Listen to the concern, clarify the symptoms and establish the impact on the user or business.</p>
+   </article>
+   <article class="stage">
+    <div class="number">STEP 02</div>
+    <h3>Investigate</h3>
+    <p>Gather evidence, check relevant systems and follow an appropriate troubleshooting process.</p>
+   </article>
+   <article class="stage">
+    <div class="number">STEP 03</div>
+    <h3>Act & Communicate</h3>
+    <p>Apply an approved solution where possible, or escalate with clear notes and regular updates.</p>
+   </article>
+   <article class="stage">
+    <div class="number">STEP 04</div>
+    <h3>Confirm & Document</h3>
+    <p>Confirm the outcome with the user, update the ticket and record useful lessons for future reference.</p>
+   </article>
+  </div>
+
+  <div class="quote">
+   <span>My professional belief</span>
+   <p>“A good support experience leaves people feeling heard, informed and confident about what happens next.”</p>
+  </div>
+
+  <div class="heading">
+   <div class="eyebrow">When situations get difficult</div>
+   <h2>Calm, structured and professional</h2>
+  </div>
+
+  <div class="grid">
+   <article class="card">
+    <div class="number">WHEN A CUSTOMER IS FRUSTRATED</div>
+    <h3>Show empathy and listen</h3>
+    <p>I allow the customer to explain the concern, acknowledge the impact and avoid making promises before understanding what can realistically be done.</p>
+   </article>
+   <article class="card">
+    <div class="number">WHEN A PROBLEM IS UNRESOLVED</div>
+    <h3>Escalate with context</h3>
+    <p>I document the symptoms, checks performed, impact and relevant evidence so the next team can continue the investigation without unnecessary repetition.</p>
+   </article>
+   <article class="card">
+    <div class="number">WHEN PRIORITIES COMPETE</div>
+    <h3>Focus on impact</h3>
+    <p>I consider urgency, business impact and service commitments, communicate expectations and seek guidance when priorities conflict.</p>
+   </article>
+   <article class="card">
+    <div class="number">WHEN AN ISSUE REPEATS</div>
+    <h3>Look beyond the symptom</h3>
+    <p>I review previous incidents and documented findings, then support root cause investigation and preventive actions where appropriate.</p>
+   </article>
+  </div>
+
+  <div class="banner" style="margin-top:50px">
+   <div class="eyebrow">Let's connect</div>
+   <h2>Support with a human touch and a professional mindset.</h2>
+   <p>I'm interested in customer support, customer service, service desk and application support opportunities in the UAE.</p>
+   <a class="btn" href="contact.html">Contact me →</a>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap foot">
+  <span>© <span id="year"></span> Sandeep Abishek</span>
+  <span>Customer Experience · Technical Support · Service Delivery</span>
+ </div>
+</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
 
