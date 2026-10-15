@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,29 +24,18 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background:
-    radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%),
-    var(--bg);
+  background: radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%), var(--bg);
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   line-height: 1.7;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.container {
-  width: min(1120px, 90%);
-  margin: auto;
-}
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.container { width: min(1120px, 90%); margin: auto; }
 
 header {
   position: sticky;
@@ -66,31 +54,12 @@ header {
   gap: 22px;
 }
 
-.brand {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  white-space: nowrap;
-}
-
+.brand { font-size: 1rem; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
 .brand span { color: var(--gold); }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav a {
-  color: var(--muted);
-  font-size: .82rem;
-  transition: color .2s;
-}
-
-nav a:hover,
-nav a.active {
-  color: var(--gold-light);
-}
+nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav a { color: var(--muted); font-size: .82rem; transition: color .2s; }
+nav a:hover, nav a.active { color: var(--gold-light); }
 
 .hero {
   min-height: 650px;
@@ -110,40 +79,14 @@ nav a.active {
   font-weight: 700;
 }
 
-h1, h2, .serif {
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-h1 {
-  font-size: clamp(3rem, 6vw, 5.4rem);
-  font-weight: 500;
-  letter-spacing: -.045em;
-  line-height: 1.08;
-  margin: 20px 0;
-}
-
+h1, h2, .serif { font-family: "Playfair Display", Georgia, serif; }
+h1 { font-size: clamp(3rem, 6vw, 5.4rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.08; margin: 20px 0; }
 h1 span { color: var(--gold); }
-
-h2 {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  font-weight: 500;
-  line-height: 1.18;
-}
-
+h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 500; line-height: 1.18; }
 h3 { line-height: 1.3; }
 
-.hero-copy {
-  color: var(--muted);
-  max-width: 590px;
-  font-size: 1.02rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 30px;
-}
+.hero-copy { color: var(--muted); max-width: 590px; font-size: 1.02rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
 
 .btn {
   display: inline-flex;
@@ -157,30 +100,12 @@ h3 { line-height: 1.3; }
 }
 
 .btn:hover { transform: translateY(-2px); }
-
-.btn-primary {
-  background: var(--gold);
-  color: #111625;
-}
-
-.btn-secondary {
-  border: 1px solid var(--line);
-}
-
-.availability {
-  color: var(--muted);
-  font-size: .82rem;
-  margin-top: 24px;
-}
-
+.btn-primary { background: var(--gold); color: #111625; }
+.btn-secondary { border: 1px solid var(--line); }
+.availability { color: var(--muted); font-size: .82rem; margin-top: 24px; }
 .availability span { color: #9fd6b2; }
 
-.portrait-wrap {
-  position: relative;
-  max-width: 390px;
-  width: 100%;
-  justify-self: end;
-}
+.portrait-wrap { position: relative; max-width: 390px; width: 100%; justify-self: end; }
 
 .portrait-frame {
   overflow: hidden;
@@ -210,10 +135,7 @@ h3 { line-height: 1.3; }
   color: var(--muted);
 }
 
-.photo-placeholder strong {
-  color: var(--gold);
-  font-size: 2.5rem;
-}
+.photo-placeholder strong { color: var(--gold); font-size: 2.5rem; }
 
 .photo-note {
   position: absolute;
@@ -225,15 +147,8 @@ h3 { line-height: 1.3; }
   border-radius: 14px;
 }
 
-.photo-note strong {
-  display: block;
-  font-size: .88rem;
-}
-
-.photo-note small {
-  color: var(--muted);
-  font-size: .72rem;
-}
+.photo-note strong { display: block; font-size: .88rem; }
+.photo-note small { color: var(--muted); font-size: .72rem; }
 
 .metrics {
   display: grid;
@@ -246,36 +161,13 @@ h3 { line-height: 1.3; }
   margin-bottom: 65px;
 }
 
-.metric {
-  background: var(--panel);
-  padding: 25px 15px;
-  text-align: center;
-}
+.metric { background: var(--panel); padding: 25px 15px; text-align: center; }
+.metric strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 2rem; color: var(--gold); font-weight: 500; }
+.metric span { color: var(--muted); font-size: .78rem; }
 
-.metric strong {
-  display: block;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 2rem;
-  color: var(--gold);
-  font-weight: 500;
-}
-
-.metric span {
-  color: var(--muted);
-  font-size: .78rem;
-}
-
-.section-heading {
-  max-width: 720px;
-  margin-bottom: 35px;
-}
-
+.section-heading { max-width: 720px; margin-bottom: 35px; }
 .section-heading h2 { margin: 13px 0; }
-
-.section-heading p {
-  color: var(--muted);
-  margin-bottom: 0;
-}
+.section-heading p { color: var(--muted); margin-bottom: 0; }
 
 .card {
   background: linear-gradient(145deg, rgba(23,34,56,.95), rgba(17,26,45,.92));
@@ -285,14 +177,9 @@ h3 { line-height: 1.3; }
 }
 
 .card h3 { margin-top: 0; }
-
 .card p { color: var(--muted); }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 
 .quote {
   border-left: 2px solid var(--gold);
@@ -302,12 +189,7 @@ h3 { line-height: 1.3; }
   margin-top: 25px;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 
 .tag {
   border: 1px solid rgba(217,183,120,.2);
@@ -318,84 +200,25 @@ h3 { line-height: 1.3; }
   font-size: .75rem;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.skill-card .number {
-  color: var(--gold);
-  font-size: .76rem;
-  letter-spacing: .13em;
-}
-
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.skill-card .number { color: var(--gold); font-size: .76rem; letter-spacing: .13em; }
 .skill-card h3 { margin: 12px 0; }
+.experience-list { display: grid; gap: 16px; }
 
-.experience-list {
-  display: grid;
-  gap: 16px;
-}
-
-.job {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 26px;
-}
-
-.job-date {
-  color: var(--gold);
-  font-size: .82rem;
-  padding-top: 4px;
-}
-
+.job { display: grid; grid-template-columns: 190px 1fr; gap: 26px; }
+.job-date { color: var(--gold); font-size: .82rem; padding-top: 4px; }
 .job h3 { margin: 0 0 5px; }
-
-.job-company {
-  color: var(--muted);
-  font-size: .86rem;
-  margin-bottom: 12px;
-}
-
-.job ul {
-  padding-left: 19px;
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
+.job-company { color: var(--muted); font-size: .86rem; margin-bottom: 12px; }
+.job ul { padding-left: 19px; margin-bottom: 0; color: var(--muted); }
 .job li { margin: 7px 0; }
-
 .job li::marker { color: var(--gold); }
 
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
+.approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.approach-card .symbol { color: var(--gold); margin-bottom: 14px; font-size: .8rem; letter-spacing: .1em; }
+.approach-card p { color: var(--muted); font-size: .9rem; }
 
-.approach-card .symbol {
-  color: var(--gold);
-  margin-bottom: 14px;
-  font-size: .8rem;
-  letter-spacing: .1em;
-}
-
-.approach-card p {
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-.education-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.education-card strong {
-  display: block;
-  margin: 8px 0;
-}
-
+.education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.education-card strong { display: block; margin: 8px 0; }
 .education-card p { font-size: .9rem; }
 
 .contact-panel {
@@ -410,93 +233,30 @@ h3 { line-height: 1.3; }
 }
 
 .contact-panel h2 { margin: 15px 0; }
-
 .contact-panel p { color: var(--muted); }
-
-.contact-links {
-  display: grid;
-  gap: 12px;
-}
-
-.contact-links a {
-  padding: 13px 15px;
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 12px;
-  overflow-wrap: anywhere;
-  font-size: .87rem;
-}
-
+.contact-links { display: grid; gap: 12px; }
+.contact-links a { padding: 13px 15px; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; overflow-wrap: anywhere; font-size: .87rem; }
 .contact-links a:hover { border-color: var(--gold); }
+.contact-links span { color: var(--gold); margin-right: 9px; }
 
-.contact-links span {
-  color: var(--gold);
-  margin-right: 9px;
-}
-
-footer {
-  padding: 28px 0;
-  border-top: 1px solid rgba(255,255,255,.07);
-  color: var(--muted);
-  font-size: .78rem;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+footer { padding: 28px 0; border-top: 1px solid rgba(255,255,255,.07); color: var(--muted); font-size: .78rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
 
 @media (max-width: 800px) {
-  .nav {
-    padding: 15px 0;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-
+  .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; gap: 12px; }
   nav { gap: 12px 16px; }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding-top: 55px;
-    padding-bottom: 60px;
-    min-height: auto;
-  }
-
-  .portrait-wrap {
-    justify-self: center;
-    max-width: 330px;
-  }
-
-  .metrics {
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 35px;
-  }
-
+  .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 55px; padding-bottom: 60px; min-height: auto; }
+  .portrait-wrap { justify-self: center; max-width: 330px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); margin-bottom: 35px; }
   .contact-panel { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
   nav a { font-size: .76rem; }
-
-  .about-grid,
-  .skills-grid,
-  .approach-grid,
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .job {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
+  .about-grid, .skills-grid, .approach-grid, .education-grid { grid-template-columns: 1fr; }
+  .job { grid-template-columns: 1fr; gap: 6px; }
   .photo-note { left: -10px; }
-
   .metric { padding: 19px 8px; }
-
   .metric strong { font-size: 1.65rem; }
 }
 </style>
@@ -506,7 +266,6 @@ footer {
 <header>
   <div class="container nav">
     <a class="brand" href="index.html">SANDEEP <span>ABISHEK.</span></a>
-
     <nav aria-label="Main navigation">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -524,7 +283,6 @@ footer {
 <section class="hero" id="home">
   <div>
     <div class="eyebrow">Customer Care · Client Experience · Service Excellence</div>
-
     <h1>Every interaction.<br>A <span>better experience.</span></h1>
 
     <p class="hero-copy">
@@ -538,9 +296,7 @@ footer {
       <a class="btn btn-secondary" href="contact.html">Let's connect</a>
     </div>
 
-    <p class="availability">
-      <span>●</span> Based in Dubai, UAE · Available for opportunities
-    </p>
+    <p class="availability"><span>●</span> Based in Dubai, UAE · Available for opportunities</p>
   </div>
 
   <div class="portrait-wrap">
@@ -550,10 +306,9 @@ footer {
         alt="Professional portrait of Sandeep Abishek"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
       >
-
       <div class="photo-placeholder">
         <strong>SA</strong>
-        <p>Check that IMG_6807.jpeg is in the same folder as index.html.</p>
+        <p>Check that home-portrait.jpeg is in the same folder as index.html.</p>
       </div>
     </div>
 
@@ -565,66 +320,32 @@ footer {
 </section>
 
 <div class="metrics">
-  <div class="metric">
-    <strong>8+</strong>
-    <span>Years across support environments</span>
-  </div>
-
-  <div class="metric">
-    <strong>500+</strong>
-    <span>Monthly Salesforce tickets handled</span>
-  </div>
-
-  <div class="metric">
-    <strong>95%+</strong>
-    <span>Customer satisfaction in tech support</span>
-  </div>
-
-  <div class="metric">
-    <strong>99.5%</strong>
-    <span>Claims processing accuracy</span>
-  </div>
+  <div class="metric"><strong>8+</strong><span>Years across support environments</span></div>
+  <div class="metric"><strong>500+</strong><span>Monthly Salesforce tickets handled</span></div>
+  <div class="metric"><strong>95%+</strong><span>Customer satisfaction in tech support</span></div>
+  <div class="metric"><strong>99.5%</strong><span>Claims processing accuracy</span></div>
 </div>
 
 <section>
   <div class="section-heading">
     <div class="eyebrow">01 / My philosophy</div>
     <h2>Customer care is more than answering a question.</h2>
-    <p>
-      It is about making people feel heard, keeping communication clear
-      and following through on what you promise.
-    </p>
+    <p>It is about making people feel heard, keeping communication clear and following through on what you promise.</p>
   </div>
 
   <div class="about-grid">
     <article class="card">
       <h3>A people-first mindset</h3>
-      <p>
-        My experience spans customer support, healthcare operations and
-        application support. Across these environments, I have worked with
-        customer concerns, sensitive information, service requests and
-        time-sensitive issues where accuracy and empathy matter.
-      </p>
-      <div class="quote">
-        “Listen carefully. Communicate clearly. Take ownership.”
-      </div>
+      <p>My experience spans customer support, healthcare operations and application support. Across these environments, I have worked with customer concerns, sensitive information, service requests and time-sensitive issues where accuracy and empathy matter.</p>
+      <div class="quote">“Listen carefully. Communicate clearly. Take ownership.”</div>
       <a class="btn btn-secondary" href="about.html">More about me ↗</a>
     </article>
 
     <article class="card">
       <h3>What I bring to a team</h3>
-      <p>
-        A calm and organised approach, attention to detail, thoughtful
-        follow-up and the ability to work with different teams to move
-        issues towards resolution. I value customer trust as much as
-        efficient service delivery.
-      </p>
+      <p>A calm and organised approach, attention to detail, thoughtful follow-up and the ability to work with different teams to move issues towards resolution. I value customer trust as much as efficient service delivery.</p>
       <div class="tags">
-        <span class="tag">Empathy</span>
-        <span class="tag">Ownership</span>
-        <span class="tag">Communication</span>
-        <span class="tag">Confidentiality</span>
-        <span class="tag">Teamwork</span>
+        <span class="tag">Empathy</span><span class="tag">Ownership</span><span class="tag">Communication</span><span class="tag">Confidentiality</span><span class="tag">Teamwork</span>
       </div>
       <a class="btn btn-secondary" href="expertise.html">Explore my expertise ↗</a>
     </article>
@@ -635,10 +356,7 @@ footer {
   <div class="section-heading">
     <div class="eyebrow">02 / Career journey</div>
     <h2>Experience built around solving problems.</h2>
-    <p>
-      Different industries, one consistent focus: dependable support
-      and a better customer experience.
-    </p>
+    <p>Different industries, one consistent focus: dependable support and a better customer experience.</p>
   </div>
 
   <div class="experience-list">
@@ -703,37 +421,24 @@ footer {
   <div class="section-heading">
     <div class="eyebrow">03 / My approach</div>
     <h2>Every customer deserves clarity.</h2>
-    <p>
-      The principles I aim to bring to every conversation and every service request.
-    </p>
+    <p>The principles I aim to bring to every conversation and every service request.</p>
   </div>
 
   <div class="approach-grid">
     <article class="card approach-card">
       <div class="symbol">01 / LISTEN</div>
       <h3>Understand first</h3>
-      <p>
-        Give the customer room to explain, ask relevant questions and
-        identify what matters most to them.
-      </p>
+      <p>Give the customer room to explain, ask relevant questions and identify what matters most to them.</p>
     </article>
-
     <article class="card approach-card">
       <div class="symbol">02 / RESOLVE</div>
       <h3>Take ownership</h3>
-      <p>
-        Work methodically, explain realistic next steps and involve the
-        right team when additional help is needed.
-      </p>
+      <p>Work methodically, explain realistic next steps and involve the right team when additional help is needed.</p>
     </article>
-
     <article class="card approach-card">
       <div class="symbol">03 / FOLLOW THROUGH</div>
       <h3>Close the loop</h3>
-      <p>
-        Keep records accurate, communicate progress and make sure the
-        customer understands the outcome or next step.
-      </p>
+      <p>Keep records accurate, communicate progress and make sure the customer understands the outcome or next step.</p>
     </article>
   </div>
 
@@ -752,14 +457,10 @@ footer {
       <strong>B.Sc. Hospitality and Hotel Management</strong>
       <p>Asan Memorial College of Arts & Science, Chennai</p>
     </article>
-
     <article class="card education-card">
       <div class="eyebrow">Languages</div>
       <strong>English & Tamil</strong>
-      <p>
-        English — Professional proficiency<br>
-        Tamil — Native proficiency
-      </p>
+      <p>English — Professional proficiency<br>Tamil — Native proficiency</p>
     </article>
   </div>
 </section>
@@ -769,12 +470,7 @@ footer {
     <div>
       <div class="eyebrow">05 / Let's connect</div>
       <h2>Good service starts with a conversation.</h2>
-      <p>
-        I’m interested in opportunities in customer support, customer care,
-        client experience and service operations. If you’re looking for
-        someone who values communication, accuracy and follow-through,
-        I’d be glad to connect.
-      </p>
+      <p>I’m interested in opportunities in customer support, customer care, client experience and service operations. If you’re looking for someone who values communication, accuracy and follow-through, I’d be glad to connect.</p>
       <a class="btn btn-primary" href="contact.html">Get in touch ↗</a>
     </div>
 
@@ -800,6 +496,5 @@ footer {
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
