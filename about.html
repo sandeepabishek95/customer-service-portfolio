@@ -1,1 +1,505 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1020">
+<meta name="description" content="Learn about Sandeep Abishek, a customer support professional based in Dubai with experience in customer care, healthcare operations and technical support.">
+<title>About Me | Sandeep Abishek</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0a1020;
+  --panel: #111a2d;
+  --gold: #d9b778;
+  --gold-light: #f0d8a8;
+  --text: #f4f1e9;
+  --muted: #a8b1c2;
+  --line: rgba(217,183,120,.22);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10,16,32,.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+.brand span { color: var(--gold); }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: .82rem;
+  transition: color .2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold-light);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 45px;
+  padding-top: 85px;
+  padding-bottom: 65px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+h1, h2, .serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 500;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+  margin: 18px 0;
+}
+
+h1 span { color: var(--gold); }
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h3 { line-height: 1.3; }
+
+.intro {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 660px;
+}
+
+.portrait-frame {
+  max-width: 340px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  justify-self: end;
+  overflow: hidden;
+  border-radius: 180px 180px 24px 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #29364d, #151e31);
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-placeholder {
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  color: var(--muted);
+}
+
+.photo-placeholder strong {
+  color: var(--gold);
+  font-size: 3rem;
+}
+
+section { padding: 45px 0; }
+
+.section-heading {
+  max-width: 730px;
+  margin-bottom: 30px;
+}
+
+.section-heading p { color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(23,34,56,.95), rgba(17,26,45,.92));
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.card p,
+.card li { color: var(--muted); }
+
+.card li { margin: 10px 0; }
+
+.card li::marker { color: var(--gold); }
+
+.quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  margin-top: 24px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tag {
+  border: 1px solid rgba(217,183,120,.2);
+  color: #d5dbea;
+  background: rgba(255,255,255,.025);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: .76rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: .86rem;
+  font-weight: 700;
+  transition: transform .2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--gold);
+  color: #111625;
+}
+
+.btn-secondary { border: 1px solid var(--line); }
+
+.contact-strip {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(17,26,45,.8);
+}
+
+.contact-strip p { color: var(--muted); }
+
+footer {
+  margin-top: 65px;
+  padding: 27px 0;
+  border-top: 1px solid rgba(255,255,255,.07);
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  nav { gap: 12px 16px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 55px;
+    gap: 32px;
+  }
+
+  .portrait-frame {
+    justify-self: center;
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 560px) {
+  nav a { font-size: .76rem; }
+  .grid { grid-template-columns: 1fr; }
+  section { padding: 32px 0; }
+  .card { padding: 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">SANDEEP <span>ABISHEK.</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html" aria-current="page">About</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="experience.html">Experience</a>
+      <a href="approach.html">My Approach</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">01 / The person behind the service</div>
+
+      <h1>More than support.<br><span>A human connection.</span></h1>
+
+      <p class="intro">
+        I’m Sandeep Abishek, a customer support professional based in
+        Dubai, with experience across customer service, healthcare
+        operations and application support. I believe excellent service
+        begins with listening, clear communication and genuine ownership.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Customer Care</span>
+        <span class="tag">Client Experience</span>
+        <span class="tag">Service Excellence</span>
+        <span class="tag">Technical Support</span>
+      </div>
+
+      <div class="button-row">
+        <a class="btn btn-primary" href="experience.html">Explore my experience ↗</a>
+        <a class="btn btn-secondary" href="contact.html">Let's connect</a>
+      </div>
+    </div>
+
+    <div class="portrait-frame">
+      <img
+        src="IMG_6807.jpeg"
+        alt="Professional portrait of Sandeep Abishek"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div class="photo-placeholder">
+        <strong>SA</strong>
+        <p>Check that IMG_6807.jpeg is in the repository root.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <div class="eyebrow">My story</div>
+      <h2>A career shaped by people, service and problem-solving.</h2>
+      <p>
+        Every role has taught me something about understanding people,
+        communicating clearly and helping move a concern towards a
+        practical outcome.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Customer service at the core</h3>
+        <p>
+          My professional journey has included customer support,
+          healthcare operations and application support. These roles
+          have involved customer concerns, service requests, follow-ups,
+          escalations and coordination with different teams.
+        </p>
+        <p>
+          I aim to make each interaction professional and helpful by
+          understanding the issue, explaining the next steps and keeping
+          the customer informed.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>What I bring to a team</h3>
+        <p>
+          I bring a calm and organised approach, attention to detail,
+          thoughtful communication and a willingness to take ownership.
+          I understand the importance of accurate records, confidentiality
+          and dependable follow-through.
+        </p>
+        <div class="quote">
+          “Listen carefully. Communicate clearly. Take ownership.”
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>My working principles</h3>
+        <ul>
+          <li>Listen carefully before suggesting a solution.</li>
+          <li>Communicate in a clear, respectful and helpful way.</li>
+          <li>Keep customer records accurate and protect confidential information.</li>
+          <li>Coordinate with the right teams when additional support is needed.</li>
+          <li>Follow up and make the next steps clear.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Skills grounded in experience</h3>
+        <p>
+          My background combines customer-facing communication with
+          practical experience in ticket management, technical support,
+          healthcare processes and service coordination.
+        </p>
+        <div class="tags">
+          <span class="tag">Empathy</span>
+          <span class="tag">Active Listening</span>
+          <span class="tag">Case Management</span>
+          <span class="tag">Escalations</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Attention to Detail</span>
+        </div>
+        <div class="button-row">
+          <a class="btn btn-secondary" href="expertise.html">View my expertise ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <div class="eyebrow">Education</div>
+      <h2>A foundation in hospitality and service.</h2>
+    </div>
+
+    <article class="card">
+      <h3>B.Sc. Hospitality and Hotel Management</h3>
+      <p>Asan Memorial College of Arts &amp; Science, Chennai</p>
+      <p>
+        My educational background complements my professional experience
+        by reinforcing the importance of service quality, professionalism
+        and understanding customer expectations.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <div class="eyebrow">Looking ahead</div>
+      <h2>Creating better customer experiences.</h2>
+      <p>
+        I’m interested in opportunities in customer support, customer care,
+        client experience and service operations where clear communication,
+        reliability and customer trust matter.
+      </p>
+    </div>
+
+    <div class="contact-strip">
+      <h3>Let's start a conversation.</h3>
+      <p>
+        If my background matches what your team is looking for, I would
+        welcome the opportunity to connect.
+      </p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="contact.html">Contact me ↗</a>
+        <a class="btn btn-secondary" href="experience.html">View my career journey ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Sandeep Abishek</span>
+    <span>Customer care with clarity, empathy and ownership.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
