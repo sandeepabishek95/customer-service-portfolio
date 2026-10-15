@@ -1,1 +1,571 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1020">
+<meta name="description" content="Sandeep Abishek — Customer Support Advisor specialising in customer care, client experience, service excellence and issue resolution.">
+<title>Sandeep Abishek | Customer Experience</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0a1020;
+  --panel: #111a2d;
+  --panel2: #172238;
+  --gold: #d9b778;
+  --gold-light: #f0d8a8;
+  --text: #f4f1e9;
+  --muted: #a8b1c2;
+  --line: rgba(217,183,120,.22);
+  --radius: 22px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%), var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, 90%); margin: auto; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10,16,32,.94);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.brand { font-size: 1rem; font-weight: 700; letter-spacing: .04em; }
+.brand span { color: var(--gold); }
+nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav a { color: var(--muted); font-size: .82rem; }
+nav a:hover, nav a.active { color: var(--gold-light); }
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 65px;
+  padding-top: 75px;
+  padding-bottom: 90px;
+}
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .72rem;
+  font-weight: 700;
+}
+h1, h2, .serif { font-family: "Playfair Display", Georgia, serif; }
+h1 {
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+  margin: 20px 0;
+}
+h1 span { color: var(--gold); }
+h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 500; line-height: 1.18; }
+h3 { line-height: 1.3; }
+.hero-copy { color: var(--muted); max-width: 590px; font-size: 1.02rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 19px;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 700;
+  transition: transform .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--gold); color: #111625; }
+.btn-secondary { border: 1px solid var(--line); }
+.availability { color: var(--muted); font-size: .82rem; margin-top: 24px; }
+.availability span { color: #9fd6b2; }
+
+.portrait-wrap { position: relative; max-width: 390px; width: 100%; justify-self: end; }
+.portrait-frame {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 190px 190px 24px 24px;
+  background: linear-gradient(145deg, #29364d, #151e31);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 80px rgba(0,0,0,.32);
+}
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+.photo-placeholder {
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  color: var(--muted);
+}
+.photo-placeholder strong { color: var(--gold); font-size: 2.5rem; }
+.photo-note {
+  position: absolute;
+  bottom: 22px;
+  left: -28px;
+  background: rgba(17,26,45,.97);
+  border: 1px solid var(--line);
+  padding: 13px 17px;
+  border-radius: 14px;
+}
+.photo-note strong { display: block; font-size: .88rem; }
+.photo-note small { color: var(--muted); font-size: .72rem; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--line);
+  margin-bottom: 65px;
+}
+.metric { background: var(--panel); padding: 25px 15px; text-align: center; }
+.metric strong {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+.metric span { color: var(--muted); font-size: .78rem; }
+
+section { padding: 70px 0; scroll-margin-top: 90px; }
+.section-heading { max-width: 720px; margin-bottom: 35px; }
+.section-heading h2 { margin: 13px 0; }
+.section-heading p { color: var(--muted); margin-bottom: 0; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.card {
+  background: linear-gradient(145deg, rgba(23,34,56,.95), rgba(17,26,45,.92));
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: var(--radius);
+  padding: 27px;
+}
+.card h3 { margin-top: 0; }
+.card p { color: var(--muted); }
+.quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  margin-top: 25px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tag {
+  border: 1px solid rgba(217,183,120,.2);
+  color: #d5dbea;
+  background: rgba(255,255,255,.025);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: .75rem;
+}
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.skill-card .number { color: var(--gold); font-size: .76rem; letter-spacing: .13em; }
+.skill-card h3 { margin: 12px 0; }
+
+.experience-list { display: grid; gap: 16px; }
+.job { display: grid; grid-template-columns: 190px 1fr; gap: 26px; }
+.job-date { color: var(--gold); font-size: .82rem; padding-top: 4px; }
+.job h3 { margin: 0 0 5px; }
+.job-company { color: var(--muted); font-size: .86rem; margin-bottom: 12px; }
+.job ul { padding-left: 19px; margin-bottom: 0; color: var(--muted); }
+.job li { margin: 7px 0; }
+.job li::marker { color: var(--gold); }
+
+.approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.approach-card .symbol { color: var(--gold); margin-bottom: 14px; font-size: .8rem; letter-spacing: .1em; }
+.approach-card p { color: var(--muted); font-size: .9rem; }
+
+.education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.education-card strong { display: block; margin: 8px 0; }
+.education-card p { font-size: .9rem; }
+
+.contact-panel {
+  background: linear-gradient(120deg, #1b2940, #111a2d 72%);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 55px);
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 35px;
+  align-items: center;
+}
+.contact-panel h2 { margin: 15px 0; }
+.contact-panel p { color: var(--muted); }
+.contact-links { display: grid; gap: 12px; }
+.contact-links a {
+  padding: 13px 15px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+  font-size: .87rem;
+}
+.contact-links a:hover { border-color: var(--gold); }
+.contact-links span { color: var(--gold); margin-right: 9px; }
+
+footer { padding: 28px 0; border-top: 1px solid rgba(255,255,255,.07); color: var(--muted); font-size: .78rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+
+@media (max-width: 800px) {
+  .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; gap: 12px; }
+  nav { gap: 12px 16px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 55px; }
+  .portrait-wrap { justify-self: center; max-width: 330px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); margin-bottom: 35px; }
+  section { padding: 52px 0; }
+  .contact-panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  nav a { font-size: .76rem; }
+  .about-grid, .skills-grid, .approach-grid, .education-grid { grid-template-columns: 1fr; }
+  .job { grid-template-columns: 1fr; gap: 6px; }
+  .photo-note { left: -10px; }
+  .metric { padding: 19px 8px; }
+  .metric strong { font-size: 1.65rem; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">SANDEEP <span>ABISHEK.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#approach">My Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">Customer Care · Client Experience · Service Excellence</div>
+    <h1>Every interaction.<br>A <span>better experience.</span></h1>
+    <p class="hero-copy">
+      I’m Sandeep Abishek, a customer support professional who believes
+      great service starts with listening, clear communication and taking
+      ownership until the customer has a path forward.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#experience">Explore my experience ↗</a>
+      <a class="btn btn-secondary" href="#contact">Let's connect</a>
+    </div>
+    <p class="availability"><span>●</span> Based in Dubai, UAE · Available for opportunities</p>
+  </div>
+
+  <div class="portrait-wrap">
+    <div class="portrait-frame">
+      <img
+        src="IMG_6807.jpeg"
+        alt="Professional portrait of Sandeep Abishek"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div class="photo-placeholder">
+        <strong>SA</strong>
+        <p>Upload IMG_6807.jpeg to the same folder as index.html.</p>
+      </div>
+    </div>
+    <div class="photo-note">
+      <strong>Sandeep Abishek</strong>
+      <small>Customer Support · Client Experience</small>
+    </div>
+  </div>
+</section>
+
+<div class="metrics">
+  <div class="metric"><strong>8+</strong><span>Years across support environments</span></div>
+  <div class="metric"><strong>500+</strong><span>Monthly Salesforce tickets handled</span></div>
+  <div class="metric"><strong>95%+</strong><span>Customer satisfaction in tech support</span></div>
+  <div class="metric"><strong>99.5%</strong><span>Claims processing accuracy</span></div>
+</div>
+
+<section id="about">
+  <div class="section-heading">
+    <div class="eyebrow">01 / About me</div>
+    <h2>Customer care is more than answering a question.</h2>
+    <p>It is about making people feel heard, keeping communication clear and following through on what you promise.</p>
+  </div>
+  <div class="about-grid">
+    <article class="card">
+      <h3>A people-first mindset</h3>
+      <p>
+        My experience spans customer support, healthcare operations and
+        application support. Across these environments, I have worked with
+        customer concerns, sensitive information, service requests and
+        time-sensitive issues where accuracy and empathy matter.
+      </p>
+      <div class="quote">“Listen carefully. Communicate clearly. Take ownership.”</div>
+    </article>
+    <article class="card">
+      <h3>What I bring to a team</h3>
+      <p>
+        A calm and organised approach, attention to detail, thoughtful
+        follow-up and the ability to work with different teams to move
+        issues towards resolution. I value customer trust as much as
+        efficient service delivery.
+      </p>
+      <div class="tags">
+        <span class="tag">Empathy</span><span class="tag">Ownership</span>
+        <span class="tag">Communication</span><span class="tag">Confidentiality</span>
+        <span class="tag">Teamwork</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="section-heading">
+    <div class="eyebrow">02 / Core strengths</div>
+    <h2>Service with substance.</h2>
+    <p>People skills supported by practical experience, structured processes and attention to detail.</p>
+  </div>
+  <div class="skills-grid">
+    <article class="card skill-card">
+      <div class="number">01 — CUSTOMER EXPERIENCE</div>
+      <h3>Customer care & relationships</h3>
+      <p>Building rapport and handling concerns with professionalism.</p>
+      <div class="tags">
+        <span class="tag">Customer care</span><span class="tag">Active listening</span>
+        <span class="tag">Complaint handling</span><span class="tag">Client follow-up</span>
+        <span class="tag">Service excellence</span>
+      </div>
+    </article>
+    <article class="card skill-card">
+      <div class="number">02 — COMMUNICATION</div>
+      <h3>Clear, thoughtful communication</h3>
+      <p>Helping customers understand next steps and keeping stakeholders informed.</p>
+      <div class="tags">
+        <span class="tag">Verbal & written communication</span>
+        <span class="tag">Cross-cultural communication</span>
+        <span class="tag">Rapport building</span><span class="tag">Stakeholder coordination</span>
+      </div>
+    </article>
+    <article class="card skill-card">
+      <div class="number">03 — SERVICE OPERATIONS</div>
+      <h3>Reliable case management</h3>
+      <p>Organising requests, documenting actions and following issues through.</p>
+      <div class="tags">
+        <span class="tag">Ticket management</span><span class="tag">SLA awareness</span>
+        <span class="tag">Escalations</span><span class="tag">Prioritisation</span>
+        <span class="tag">Multitasking</span>
+      </div>
+    </article>
+    <article class="card skill-card">
+      <div class="number">04 — TOOLS & ACCURACY</div>
+      <h3>Technology-enabled support</h3>
+      <p>Comfortable with support platforms, customer records and confidential information.</p>
+      <div class="tags">
+        <span class="tag">Salesforce</span><span class="tag">Jira</span>
+        <span class="tag">Genesys</span><span class="tag">Avaya One-X</span>
+        <span class="tag">Microsoft 365</span><span class="tag">Healthcare operations</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-heading">
+    <div class="eyebrow">03 / Career journey</div>
+    <h2>Experience built around solving problems.</h2>
+    <p>Different industries, one consistent focus: dependable support and a better customer experience.</p>
+  </div>
+
+  <div class="experience-list">
+    <article class="card job">
+      <div class="job-date">Sep 2023 – Sep 2026</div>
+      <div>
+        <h3>Application Support Engineer</h3>
+        <div class="job-company">CorroHealth</div>
+        <ul>
+          <li>Handled 500+ monthly Salesforce tickets, including requests, incidents, follow-ups and escalations.</li>
+          <li>Kept users and stakeholders informed while documenting issues and coordinating with relevant teams.</li>
+          <li>Worked with sensitive healthcare information while maintaining accuracy and confidentiality.</li>
+          <li>Contributed to corrective and preventive actions associated with a 35% reduction in recurring incidents.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card job">
+      <div class="job-date">Jan 2022 – Aug 2023</div>
+      <div>
+        <h3>Senior Process Executive</h3>
+        <div class="job-company">Cognizant · EmblemHealth support</div>
+        <ul>
+          <li>Processed healthcare claims, appeals, denials and reprocessing tasks with attention to detail.</li>
+          <li>Investigated discrepancies and coordinated with provider and billing-office representatives.</li>
+          <li>Maintained accurate documentation, confidentiality and a reported 99.5% processing accuracy.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card job">
+      <div class="job-date">Apr 2019 – May 2021</div>
+      <div>
+        <h3>Associate IT Consultant</h3>
+        <div class="job-company">Sutherland · McAfee technical support</div>
+        <ul>
+          <li>Supported customers with software, accounts, operating systems, email, network and peripheral issues.</li>
+          <li>Handled approximately 40–50 calls per day using support and telephony platforms.</li>
+          <li>Focused on clear explanations, accurate records, follow-up and customer satisfaction of 95%+.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card job">
+      <div class="job-date">Oct 2017 – Mar 2019</div>
+      <div>
+        <h3>Customer Support Executive</h3>
+        <div class="job-company">Foundever · Bell Canada support</div>
+        <ul>
+          <li>Assisted customers with broadband, router, IPTV, email, connectivity and service activation concerns.</li>
+          <li>Worked in a high-volume support environment, troubleshooting issues and maintaining customer records.</li>
+          <li>Used remote support methods to guide customers through relevant troubleshooting steps.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="section-heading">
+    <div class="eyebrow">04 / My approach</div>
+    <h2>Every customer deserves clarity.</h2>
+    <p>The principles I aim to bring to every conversation and every service request.</p>
+  </div>
+  <div class="approach-grid">
+    <article class="card approach-card">
+      <div class="symbol">01 / LISTEN</div>
+      <h3>Understand first</h3>
+      <p>Give the customer room to explain, ask relevant questions and identify what matters most to them.</p>
+    </article>
+    <article class="card approach-card">
+      <div class="symbol">02 / RESOLVE</div>
+      <h3>Take ownership</h3>
+      <p>Work methodically, explain realistic next steps and involve the right team when additional help is needed.</p>
+    </article>
+    <article class="card approach-card">
+      <div class="symbol">03 / FOLLOW THROUGH</div>
+      <h3>Close the loop</h3>
+      <p>Keep records accurate, communicate progress and make sure the customer understands the outcome or next step.</p>
+    </article>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-heading">
+    <div class="eyebrow">05 / Education & languages</div>
+    <h2>A foundation in service.</h2>
+  </div>
+  <div class="education-grid">
+    <article class="card education-card">
+      <div class="eyebrow">Education</div>
+      <strong>B.Sc. Hospitality and Hotel Management</strong>
+      <p>Asan Memorial College of Arts & Science, Chennai</p>
+    </article>
+    <article class="card education-card">
+      <div class="eyebrow">Languages</div>
+      <strong>English & Tamil</strong>
+      <p>English — Professional proficiency<br>Tamil — Native proficiency</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-panel">
+    <div>
+      <div class="eyebrow">06 / Let's connect</div>
+      <h2>Good service starts with a conversation.</h2>
+      <p>
+        I’m interested in opportunities in customer support, customer care,
+        client experience and service operations. If you’re looking for
+        someone who values communication, accuracy and follow-through,
+        I’d be glad to connect.
+      </p>
+      <a class="btn btn-primary" href="mailto:sandeepabishek95@gmail.com">Email me ↗</a>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:sandeepabishek95@gmail.com"><span>✉</span> sandeepabishek95@gmail.com</a>
+      <a href="tel:+971582315505"><span>☎</span> +971 58 231 5505</a>
+      <a href="https://www.linkedin.com/in/sandeep-abishek-3b073719b" target="_blank" rel="noopener noreferrer"><span>↗</span> LinkedIn profile</a>
+      <a href="Sandeep_Abishek_Customer_Support_Resume2026.pdf" target="_blank" rel="noopener noreferrer"><span>↓</span> View my résumé (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Sandeep Abishek</span>
+    <span>Customer care with clarity, empathy and ownership.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("main section[id]");
+
+function updateActiveLink() {
+  let current = "home";
+
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 150) {
+      current = section.id;
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === "#" + current
+    );
+  });
+}
+
+window.addEventListener("scroll", updateActiveLink);
+updateActiveLink();
+</script>
+</body>
+</html>
+
