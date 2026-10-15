@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#08111F">
+<meta name="theme-color" content="#06101E">
 <meta name="description" content="Sandeep Abishek's approach to customer experience, communication, technical troubleshooting and service delivery.">
 <title>My Approach | Sandeep Abishek</title>
 
@@ -42,7 +42,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(5,14,27,.88);
+  background: rgba(5,14,27,.90);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255,255,255,.10);
@@ -80,11 +80,11 @@ nav a {
 nav a:hover,
 nav a.active { color: var(--gold); }
 
-/* Hero and faded portrait */
+/* Hero and visible background portrait */
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: 440px;
+  min-height: 470px;
   display: flex;
   align-items: center;
   padding: 65px 0 55px;
@@ -99,20 +99,20 @@ nav a.active { color: var(--gold); }
   width: 76%;
   height: 112%;
   background: url("approach-portrait.jpeg") center 30% / cover no-repeat;
-  opacity: .43;
-  filter: saturate(.7);
+  opacity: .72;
+  filter: saturate(.9) brightness(1.08);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0,0,0,.25) 13%,
-    black 45%,
+    rgba(0,0,0,.35) 10%,
+    black 35%,
     black 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0,0,0,.25) 13%,
-    black 45%,
+    rgba(0,0,0,.35) 10%,
+    black 35%,
     black 100%
   );
 }
@@ -123,15 +123,19 @@ nav a.active { color: var(--gold); }
   z-index: -1;
   inset: 0 -6%;
   background:
-    linear-gradient(90deg,
+    linear-gradient(
+      90deg,
+      rgba(6,16,30,.97) 0%,
+      rgba(6,16,30,.78) 30%,
+      rgba(6,16,30,.24) 70%,
+      rgba(6,16,30,.12) 100%
+    ),
+    linear-gradient(
+      0deg,
       #06101e 0%,
-      rgba(6,16,30,.96) 30%,
-      rgba(6,16,30,.53) 70%,
-      rgba(6,16,30,.34) 100%),
-    linear-gradient(0deg,
-      #06101e 0%,
-      transparent 40%,
-      rgba(6,16,30,.12) 100%);
+      transparent 30%,
+      rgba(6,16,30,.05) 100%
+    );
 }
 
 .hero-content {
@@ -391,7 +395,7 @@ footer {
   .hero::before {
     width: 85%;
     right: -5%;
-    opacity: .3;
+    opacity: .55;
   }
 
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -403,22 +407,24 @@ footer {
   .wrap { width: 90%; }
 
   .hero {
-    min-height: 440px;
+    min-height: 470px;
     padding: 55px 0 45px;
   }
 
   .hero::before {
     width: 100%;
     right: -5%;
-    opacity: .23;
+    opacity: .48;
+    filter: saturate(.9) brightness(1.08);
     background-position: 56% center;
   }
 
   .hero::after {
     background: linear-gradient(
       90deg,
-      rgba(6,16,30,.95),
-      rgba(6,16,30,.68)
+      rgba(6,16,30,.88) 0%,
+      rgba(6,16,30,.58) 48%,
+      rgba(6,16,30,.30) 100%
     );
   }
 
