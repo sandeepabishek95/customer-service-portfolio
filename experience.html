@@ -29,15 +29,22 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.7;
   overflow-wrap: break-word;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -83,6 +90,7 @@ header {
 }
 
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
@@ -104,7 +112,8 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.active,
+nav a[aria-current="page"] {
   color: var(--gold);
 }
 
@@ -136,7 +145,7 @@ h3 {
 
 h1,
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 h1 {
@@ -301,7 +310,7 @@ h1 span {
 
 .metric strong {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 35px;
   color: var(--gold);
   font-weight: 500;
@@ -339,10 +348,6 @@ h1 span {
   transition: transform .2s ease;
 }
 
-.cta:hover {
-  transform: translateY(-2px);
-}
-
 /* FOOTER */
 
 footer {
@@ -357,6 +362,14 @@ footer {
   justify-content: space-between;
   gap: 15px;
   flex-wrap: wrap;
+}
+
+/* HOVER EFFECTS ONLY ON DEVICES WITH A MOUSE (no sticky hover on touch screens) */
+
+@media (hover: hover) {
+  .cta:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* TABLETS AND SMALL LAPTOPS */
@@ -612,7 +625,7 @@ footer {
             <div>
               <div class="company">CorroHealth</div>
               <h3>Application Support Engineer</h3>
-              <div class="meta">Healthcare technology · Application & production support</div>
+              <div class="meta">Healthcare technology · Application &amp; production support</div>
             </div>
             <div class="period">Sep 2023 – Sep 2026</div>
           </div>
@@ -624,11 +637,11 @@ footer {
           </p>
 
           <ul>
-            <li>Handled application support requests and incidents, working to meet established SLAs and service commitments.</li>
+            <li>Handled 500+ monthly Salesforce tickets, including requests, incidents, follow-ups and escalations, working to meet established SLAs and service commitments.</li>
             <li>Investigated reported issues, gathered relevant information and followed structured troubleshooting procedures.</li>
             <li>Participated in incident management, problem management and root cause analysis activities.</li>
             <li>Coordinated with business users and relevant technical teams during priority incidents.</li>
-            <li>Supported proactive monitoring and preventive maintenance to reduce recurring issues.</li>
+            <li>Supported proactive monitoring and preventive maintenance to reduce recurring issues, contributing to a 35% reduction in recurring incidents.</li>
             <li>Maintained ticket updates, technical documentation and knowledge resources to support consistent service delivery.</li>
             <li>Assisted with user access, application configuration and system-related troubleshooting in line with approved procedures.</li>
           </ul>
@@ -648,30 +661,75 @@ footer {
         <div class="job-card">
           <div class="job-top">
             <div>
-              <div class="company">Earlier Professional Experience</div>
-              <h3>Support & Service Operations</h3>
-              <div class="meta">Customer assistance · Technical troubleshooting · User support</div>
+              <div class="company">Cognizant · EmblemHealth support</div>
+              <h3>Senior Process Executive</h3>
+              <div class="meta">Healthcare claims · Process operations</div>
             </div>
-            <div class="period">Previous roles</div>
+            <div class="period">Jan 2022 – Aug 2023</div>
           </div>
 
-          <p>
-            My broader professional background includes supporting users,
-            responding to service requests, documenting issues and working
-            with teams to provide dependable customer and technical support.
-          </p>
-
           <ul>
-            <li>Communicated with users to understand requests and clarify the issue before troubleshooting.</li>
-            <li>Prioritised tasks based on impact, urgency and service requirements.</li>
-            <li>Provided clear updates and escalated unresolved issues with relevant details.</li>
-            <li>Followed documented processes and maintained accurate support records.</li>
+            <li>Processed healthcare claims, appeals, denials and reprocessing tasks with attention to detail.</li>
+            <li>Investigated discrepancies and coordinated with provider and billing-office representatives.</li>
+            <li>Maintained accurate documentation, confidentiality and a reported 99.5% processing accuracy.</li>
           </ul>
 
-          <p class="meta">
-            For an accurate employer-by-employer history, add the company names,
-            job titles and dates from your CV here.
-          </p>
+          <div class="tags">
+            <span class="tag">Healthcare Claims</span>
+            <span class="tag">Appeals &amp; Denials</span>
+            <span class="tag">Accuracy</span>
+            <span class="tag">Confidentiality</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <div class="company">Sutherland · McAfee technical support</div>
+              <h3>Associate IT Consultant</h3>
+              <div class="meta">Technical support · Customer assistance</div>
+            </div>
+            <div class="period">Apr 2019 – May 2021</div>
+          </div>
+
+          <ul>
+            <li>Supported customers with software, accounts, operating systems, email, network and peripheral issues.</li>
+            <li>Handled approximately 40–50 calls per day using support and telephony platforms.</li>
+            <li>Focused on clear explanations, accurate records, follow-up and customer satisfaction of 95%+.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Technical Support</span>
+            <span class="tag">Troubleshooting</span>
+            <span class="tag">Customer Satisfaction</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <div class="company">Foundever · Bell Canada support</div>
+              <h3>Customer Support Executive</h3>
+              <div class="meta">Customer assistance · Remote troubleshooting</div>
+            </div>
+            <div class="period">Oct 2017 – Mar 2019</div>
+          </div>
+
+          <ul>
+            <li>Assisted customers with broadband, router, IPTV, email, connectivity and service activation concerns.</li>
+            <li>Worked in a high-volume support environment, troubleshooting issues and maintaining customer records.</li>
+            <li>Used remote support methods to guide customers through relevant troubleshooting steps.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Customer Support</span>
+            <span class="tag">Remote Support</span>
+            <span class="tag">Service Activation</span>
+          </div>
         </div>
       </article>
     </div>
@@ -698,7 +756,7 @@ footer {
 
     <div class="banner">
       <div class="eyebrow">The next chapter</div>
-      <h2 style="font-family:'Playfair Display',serif;font-weight:500;margin:12px 0">
+      <h2 style="font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:12px 0">
         Ready to contribute to a customer-focused team.
       </h2>
       <p>
@@ -719,6 +777,15 @@ footer {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Keep the active tab visible in the scrollable mobile menu */
+(function () {
+  var nav = document.querySelector("nav");
+  var active = nav && nav.querySelector("a.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+  }
+})();
 </script>
 </body>
 </html>
