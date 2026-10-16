@@ -30,6 +30,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -38,9 +40,14 @@ body {
     radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%),
     var(--bg);
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.8;
   overflow-wrap: break-word;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -91,6 +98,7 @@ header {
 }
 
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
@@ -112,8 +120,9 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
-  color: var(--gold-light);
+nav a.active,
+nav a[aria-current="page"] {
+  color: var(--gold);
 }
 
 nav a:focus-visible,
@@ -309,17 +318,14 @@ section {
   transition: transform .2s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
 .btn-primary {
   background: var(--gold);
   color: #111625;
 }
 
 .btn-secondary {
-  border: 1px solid var(--line);
+  color: var(--gold);
+  border: 1px solid rgba(217,183,120,.55);
 }
 
 /* CONTACT STRIP */
@@ -351,6 +357,14 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* HOVER EFFECTS ONLY ON DEVICES WITH A MOUSE (no sticky hover on touch screens) */
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* TABLETS AND SMALL LAPTOPS */
@@ -588,7 +602,7 @@ footer {
       >
       <div class="photo-placeholder">
         <strong>SA</strong>
-        <p>Check that IMG_6807.jpeg is in the repository root.</p>
+        <p>Check that IMG_6807.jpeg is in the same folder as about.html.</p>
       </div>
     </div>
   </section>
@@ -673,8 +687,8 @@ footer {
     </div>
 
     <article class="card">
-      <h3>B.Sc. Hotel and Catering Management</h3>
-      <p>Asan Memorial College of Arts &amp; Science, Chennai, india</p>
+      <h3>B.Sc. Hospitality and Hotel Management</h3>
+      <p>Asan Memorial College of Arts &amp; Science, Chennai, India</p>
       <p>
         My educational background complements my professional experience
         by reinforcing the importance of service quality, professionalism
@@ -718,6 +732,15 @@ footer {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Keep the active tab visible in the scrollable mobile menu */
+(function () {
+  var nav = document.querySelector("nav");
+  var active = nav && nav.querySelector("a.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+  }
+})();
 </script>
 
 </body>
