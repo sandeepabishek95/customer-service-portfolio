@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#06101E">
-<meta name="description" content="Sandeep Abishek's approach to customer experience, communication, technical troubleshooting and service delivery.">
-<title>My Approach | Sandeep Abishek</title>
+<meta name="description" content="Contact Sandeep Abishek, a customer support professional based in Dubai, UAE, for customer support, service desk and application support opportunities.">
+<title>Contact | Sandeep Abishek</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -21,12 +21,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.7;
   overflow-wrap: break-word;
 }
@@ -45,8 +47,8 @@ header {
   top: 0;
   z-index: 100;
   background: rgba(5,14,27,.94);
-  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255,255,255,.10);
 }
 .nav {
@@ -65,6 +67,7 @@ header {
 }
 .brand span { color: var(--gold); }
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
@@ -84,72 +87,16 @@ nav a {
   transition: color .2s ease;
 }
 nav a:hover,
-nav a.active {
-  color: var(--gold);
-}
+nav a.active { color: var(--gold); }
 nav a:focus-visible,
-.btn:focus-visible {
+.btn:focus-visible,
+.contact-card:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
-/* HERO AND PORTRAIT */
+/* HERO */
 .hero {
-  position: relative;
-  isolation: isolate;
-  min-height: 470px;
-  display: flex;
-  align-items: center;
-  padding: 65px 0 55px;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  right: -5.5%;
-  width: 76%;
-  height: 112%;
-  background: url("approach-portrait.jpeg") center 30% / cover no-repeat;
-  opacity: .72;
-  filter: saturate(.9) brightness(1.08);
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0,0,0,.35) 10%,
-    black 35%,
-    black 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0,0,0,.35) 10%,
-    black 35%,
-    black 100%
-  );
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0 -6%;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6,16,30,.97) 0%,
-      rgba(6,16,30,.78) 30%,
-      rgba(6,16,30,.24) 70%,
-      rgba(6,16,30,.12) 100%
-    ),
-    linear-gradient(
-      0deg,
-      #06101e 0%,
-      transparent 30%,
-      rgba(6,16,30,.05) 100%
-    );
-}
-.hero-content {
-  max-width: 760px;
-  position: relative;
+  padding: 85px 0 45px;
 }
 .eyebrow {
   color: var(--gold);
@@ -159,7 +106,7 @@ nav a:focus-visible,
   text-transform: uppercase;
 }
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -167,71 +114,55 @@ h1 {
   font-size: clamp(43px, 6.4vw, 78px);
   letter-spacing: -1.5px;
   margin: 15px 0 20px;
+  max-width: 900px;
 }
 h1 span { color: var(--gold); }
+h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin: 10px 0;
+}
 .intro {
   max-width: 680px;
   color: var(--muted);
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.8;
 }
-/* GLASS CARDS */
+/* CONTACT CARDS */
 .section { padding: 15px 0 75px; }
-.heading { margin: 30px 0 27px; }
-h2 {
-  font-size: clamp(30px, 4vw, 43px);
-  margin: 10px 0;
-}
-.heading p {
-  color: var(--muted);
-  max-width: 700px;
-  margin-top: 8px;
-}
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
-.card {
+.contact-card {
   position: relative;
+  display: block;
   min-width: 0;
   overflow: hidden;
   padding: 25px;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,.075),
-    rgba(255,255,255,.025)
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.07),
-    0 15px 45px rgba(0,0,0,.12);
-  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 15px 45px rgba(0,0,0,.12);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   transition: transform .25s, border-color .25s;
 }
-.card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(225,183,111,.7);
-}
-.card::before {
+.contact-card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 20%;
   width: 60%;
   height: 1px;
-  background: linear-gradient(
-    90deg, transparent, var(--gold), transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   opacity: .8;
 }
 .card-top {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 .icon {
   width: 54px;
@@ -242,96 +173,32 @@ h2 {
   border: 1px solid var(--gold);
   border-radius: 50%;
   color: var(--gold);
-  font-size: 17px;
+  font-size: 18px;
 }
 .number {
   color: var(--gold);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 2px;
-}
-.card h3 {
-  font-size: 23px;
-  margin: 4px 0 12px;
-}
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 0;
-}
-/* RESOLUTION PROCESS */
-.process {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 15px;
-}
-.stage {
-  min-width: 0;
-  padding: 22px;
-  border: 1px solid rgba(225,183,111,.24);
-  border-radius: 15px;
-  background: rgba(14,29,48,.72);
-}
-.stage h3 {
-  font-size: 21px;
-  margin: 12px 0 7px;
-}
-.stage p {
-  color: var(--muted);
-  font-size: 13px;
-}
-/* QUOTE */
-.quote {
-  margin: 38px 0 55px;
-  padding: 28px 30px;
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(19,34,54,.66);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-.quote-mark {
-  flex: 0 0 auto;
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 65px;
-  line-height: 1;
-}
-.quote-content { flex: 1; min-width: 0; }
-.quote p {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(20px, 3vw, 29px);
-  font-style: italic;
-  line-height: 1.45;
-  margin: 0 0 12px;
-}
-.quote span {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--gold);
   text-transform: uppercase;
 }
-/* DIFFICULT SITUATIONS */
-.difficult-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 17px;
+.contact-card h3 {
+  font-size: 22px;
+  margin: 0 0 6px;
 }
-.difficult-grid .card h3 { font-size: 22px; }
-/* CONTACT BANNER */
+.contact-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+/* BANNER */
 .banner {
   margin-top: 45px;
   padding: 32px;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: linear-gradient(
-    120deg,
-    rgba(19,34,54,.92),
-    rgba(9,23,40,.8)
-  );
+  background: linear-gradient(120deg, rgba(19,34,54,.92), rgba(9,23,40,.8));
 }
 .banner p { color: var(--muted); }
 .btn {
@@ -345,7 +212,6 @@ h2 {
   font-weight: 700;
   transition: transform .2s;
 }
-.btn:hover { transform: translateY(-2px); }
 /* FOOTER */
 footer {
   border-top: 1px solid rgba(255,255,255,.10);
@@ -359,28 +225,19 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
 }
+/* HOVER ONLY ON DEVICES THAT SUPPORT IT (avoids sticky hover on touch screens) */
+@media (hover: hover) {
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(225,183,111,.7);
+  }
+  .btn:hover { transform: translateY(-2px); }
+}
 /* TABLETS AND SMALL LAPTOPS */
 @media (max-width: 1000px) {
-  .nav {
-    gap: 18px;
-  }
-  nav {
-    gap: 13px;
-  }
-  nav a {
-    font-size: 11px;
-  }
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .hero::before {
-    width: 85%;
-    right: -5%;
-    opacity: .55;
-  }
+  .nav { gap: 18px; }
+  nav { gap: 13px; }
+  nav a { font-size: 11px; }
 }
 /* MOBILE NAVIGATION */
 @media (max-width: 760px) {
@@ -415,45 +272,15 @@ footer {
     font-size: 12px;
     padding: 5px 0;
   }
-  .hero {
-    min-height: 470px;
-    padding: 55px 0 45px;
-  }
-  .hero::before {
-    width: 100%;
-    right: -5%;
-    opacity: .48;
-    background-position: 56% center;
-  }
-  .hero::after {
-    background: linear-gradient(
-      90deg,
-      rgba(6,16,30,.88) 0%,
-      rgba(6,16,30,.58) 48%,
-      rgba(6,16,30,.30) 100%
-    );
-  }
-  .grid,
-  .process,
-  .difficult-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .card { padding: 23px; }
-  .quote {
-    align-items: flex-start;
-    padding: 22px;
-    gap: 12px;
-  }
-  .quote-mark { font-size: 45px; }
+  .hero { padding: 55px 0 35px; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-card { padding: 23px; }
   .banner { padding: 24px; }
 }
 /* SMALL PHONES */
 @media (max-width: 560px) {
   .wrap { width: 90%; }
-  .hero {
-    min-height: 440px;
-    padding: 45px 0;
-  }
+  .hero { padding: 45px 0 30px; }
   h1 {
     font-size: clamp(36px, 9.5vw, 52px);
     letter-spacing: -1px;
@@ -464,14 +291,8 @@ footer {
     letter-spacing: 2.5px;
   }
   .section { padding: 15px 0 55px; }
-  .heading { margin: 25px 0 22px; }
-  .card { padding: 21px; }
-  .card h3 { font-size: 21px; }
-  .quote {
-    margin: 30px 0 40px;
-    padding: 20px;
-  }
-  .quote p { font-size: 21px; }
+  .contact-card { padding: 21px; }
+  .contact-card h3 { font-size: 20px; }
   .banner {
     padding: 22px;
     margin-top: 35px;
@@ -486,10 +307,8 @@ footer {
   .wrap { width: 92%; }
   nav { gap: 17px; }
   nav a { font-size: 11px; }
-  .card,
-  .stage { padding: 18px; }
-  .quote { padding: 18px; }
-  .banner { padding: 19px; }
+  .contact-card,
+  .banner { padding: 18px; }
 }
 /* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
@@ -513,137 +332,89 @@ footer {
       <a href="about.html">About</a>
       <a href="expertise.html">Expertise</a>
       <a href="experience.html">Experience</a>
-      <a class="active" href="approach.html" aria-current="page">My Approach</a>
-      <a href="contact.html">Contact</a>
+      <a href="approach.html">My Approach</a>
+      <a class="active" href="contact.html" aria-current="page">Contact</a>
     </nav>
   </div>
 </header>
+
 <main>
   <section class="hero wrap">
-    <div class="hero-content">
-      <div class="eyebrow">My Approach</div>
-      <h1>People first.<br><span>Solutions</span> that last.</h1>
-      <p class="intro">
-        My approach is simple — listen carefully, understand the bigger picture,
-        communicate clearly and take ownership until the issue is resolved.
-        I focus on creating better experiences for customers, colleagues and business teams.
-      </p>
-    </div>
+    <div class="eyebrow">Contact</div>
+    <h1>Good service starts with a <span>conversation.</span></h1>
+    <p class="intro">
+      I'm interested in opportunities in customer support, customer care,
+      service desk and application support in the UAE. If you're looking for
+      someone who values communication, accuracy and follow-through, I'd be glad to connect.
+    </p>
   </section>
+
   <section class="section wrap">
     <div class="grid">
-      <article class="card">
+      <a class="contact-card" href="mailto:sandeepabishek95@gmail.com">
         <div class="card-top">
-          <div class="icon">01</div>
-          <div class="number">01 / LISTEN</div>
+          <div class="icon" aria-hidden="true">✉</div>
+          <div class="number">Email</div>
         </div>
-        <h3>Understand first</h3>
-        <p>
-          I take time to listen to the customer, ask the right questions and identify
-          what matters most to them. This helps in finding the real cause and providing
-          the right solution.
-        </p>
-      </article>
-      <article class="card">
+        <h3>Send me an email</h3>
+        <p>sandeepabishek95@gmail.com</p>
+      </a>
+
+      <a class="contact-card" href="tel:+971582315505">
         <div class="card-top">
-          <div class="icon">02</div>
-          <div class="number">02 / RESOLVE</div>
+          <div class="icon" aria-hidden="true">☎</div>
+          <div class="number">Phone</div>
         </div>
-        <h3>Take ownership</h3>
-        <p>
-          I work methodically, explain clear next steps and involve the right teams
-          when needed. I keep the customer informed throughout the process.
-        </p>
-      </article>
-      <article class="card">
+        <h3>Give me a call</h3>
+        <p>+971 58 231 5505</p>
+      </a>
+
+      <a class="contact-card" href="https://www.linkedin.com/in/sandeep-abishek-3b073719b" target="_blank" rel="noopener noreferrer">
         <div class="card-top">
-          <div class="icon">03</div>
-          <div class="number">03 / FOLLOW THROUGH</div>
+          <div class="icon" aria-hidden="true">↗</div>
+          <div class="number">LinkedIn</div>
         </div>
-        <h3>Create lasting impact</h3>
-        <p>
-          I ensure issues are resolved, records are updated accurately and the customer
-          is confident with the outcome. I also look for ways to prevent similar issues
-          in the future.
-        </p>
-      </article>
+        <h3>Let's connect online</h3>
+        <p>View my LinkedIn profile</p>
+      </a>
+
+      <a class="contact-card" href="Sandeep_Abishek_Customer_Support_Resume2026.pdf" target="_blank" rel="noopener noreferrer">
+        <div class="card-top">
+          <div class="icon" aria-hidden="true">↓</div>
+          <div class="number">Résumé</div>
+        </div>
+        <h3>View my résumé</h3>
+        <p>Download or view my CV (PDF)</p>
+      </a>
     </div>
-    <div class="quote">
-      <div class="quote-mark">“</div>
-      <div class="quote-content">
-        <p>Great service is not just about solving a problem, but about making people feel valued.</p>
-        <span>Sandeep Abishek · Customer Support Professional</span>
-      </div>
-    </div>
-    <div class="heading">
-      <div class="eyebrow">My resolution process</div>
-      <h2>From first contact to a clear outcome</h2>
-      <p>A structured process helps me remain calm, organised and customer-focused, even when a request is urgent.</p>
-    </div>
-    <div class="process">
-      <article class="stage">
-        <div class="number">STEP 01</div>
-        <h3>Understand</h3>
-        <p>Listen to the concern, clarify the symptoms and establish the impact on the user or business.</p>
-      </article>
-      <article class="stage">
-        <div class="number">STEP 02</div>
-        <h3>Investigate</h3>
-        <p>Gather evidence, check relevant systems and follow an appropriate troubleshooting process.</p>
-      </article>
-      <article class="stage">
-        <div class="number">STEP 03</div>
-        <h3>Act &amp; Communicate</h3>
-        <p>Apply an approved solution where possible, or escalate with clear notes and regular updates.</p>
-      </article>
-      <article class="stage">
-        <div class="number">STEP 04</div>
-        <h3>Confirm &amp; Document</h3>
-        <p>Confirm the outcome with the user, update the ticket and record useful lessons for future reference.</p>
-      </article>
-    </div>
-    <div class="heading" style="margin-top:60px">
-      <div class="eyebrow">When situations get difficult</div>
-      <h2>Calm, structured and professional</h2>
-    </div>
-    <div class="difficult-grid">
-      <article class="card">
-        <div class="number">WHEN A CUSTOMER IS FRUSTRATED</div>
-        <h3>Show empathy and listen</h3>
-        <p>I allow the customer to explain the concern, acknowledge the impact and avoid making promises before understanding what can realistically be done.</p>
-      </article>
-      <article class="card">
-        <div class="number">WHEN A PROBLEM IS UNRESOLVED</div>
-        <h3>Escalate with context</h3>
-        <p>I document the symptoms, checks performed, impact and relevant evidence so the next team can continue the investigation without unnecessary repetition.</p>
-      </article>
-      <article class="card">
-        <div class="number">WHEN PRIORITIES COMPETE</div>
-        <h3>Focus on impact</h3>
-        <p>I consider urgency, business impact and service commitments, communicate expectations and seek guidance when priorities conflict.</p>
-      </article>
-      <article class="card">
-        <div class="number">WHEN AN ISSUE REPEATS</div>
-        <h3>Look beyond the symptom</h3>
-        <p>I review previous incidents and documented findings, then support root cause investigation and preventive actions where appropriate.</p>
-      </article>
-    </div>
+
     <div class="banner">
-      <div class="eyebrow">Let's connect</div>
+      <div class="eyebrow">Based in Dubai, UAE</div>
       <h2>Support with a human touch and a professional mindset.</h2>
-      <p>I'm interested in customer support, customer service, service desk and application support opportunities in the UAE.</p>
-      <a class="btn" href="contact.html">Contact me →</a>
+      <p>Available for opportunities in customer support, customer service, service desk and application support.</p>
+      <a class="btn" href="experience.html">View my experience →</a>
     </div>
   </section>
 </main>
+
 <footer>
   <div class="wrap foot">
     <span>© <span id="year"></span> Sandeep Abishek</span>
     <span>Customer Experience · Technical Support · Service Delivery</span>
   </div>
 </footer>
+
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Keep the active tab visible in the scrollable mobile menu */
+(function () {
+  var nav = document.querySelector("nav");
+  var active = nav && nav.querySelector("a.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+  }
+})();
 </script>
 </body>
 </html>
