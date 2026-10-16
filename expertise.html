@@ -28,15 +28,22 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.7;
   overflow-wrap: break-word;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -83,6 +90,7 @@ h1 span {
 }
 
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
@@ -104,7 +112,8 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.active,
+nav a[aria-current="page"] {
   color: var(--gold);
 }
 
@@ -130,7 +139,7 @@ nav a:focus-visible,
 
 h1,
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -180,11 +189,6 @@ h2 {
   border-radius: 16px;
   background: linear-gradient(145deg, #101D2E, #0B1727);
   transition: transform .25s ease, border-color .25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
 }
 
 .number {
@@ -280,10 +284,6 @@ h2 {
   transition: transform .2s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
 /* FOOTER */
 
 footer {
@@ -298,6 +298,19 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* HOVER EFFECTS ONLY ON DEVICES WITH A MOUSE (no sticky hover on touch screens) */
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* TABLETS AND SMALL LAPTOPS */
@@ -515,42 +528,42 @@ footer {
   <div class="grid">
    <article class="card">
     <div class="number">01 / CUSTOMER EXPERIENCE</div>
-    <h3>Customer Service & Communication</h3>
+    <h3>Customer Service &amp; Communication</h3>
     <p>Listening carefully, understanding customer concerns, explaining solutions clearly and maintaining a professional approach throughout every interaction.</p>
     <div class="tags"><span class="tag">Customer Communication</span><span class="tag">Active Listening</span><span class="tag">Query Resolution</span><span class="tag">Customer Follow-up</span></div>
    </article>
 
    <article class="card">
     <div class="number">02 / TECHNICAL SUPPORT</div>
-    <h3>IT & Application Support</h3>
+    <h3>IT &amp; Application Support</h3>
     <p>Supporting users with application issues, access problems, system errors and technical incidents through structured troubleshooting.</p>
     <div class="tags"><span class="tag">L1 / L2 Support</span><span class="tag">Application Troubleshooting</span><span class="tag">Windows Support</span><span class="tag">Remote Support</span></div>
    </article>
 
    <article class="card">
     <div class="number">03 / SERVICE OPERATIONS</div>
-    <h3>Incident & Ticket Management</h3>
+    <h3>Incident &amp; Ticket Management</h3>
     <p>Recording accurate incident details, prioritising requests, tracking progress, coordinating with teams and communicating updates.</p>
     <div class="tags"><span class="tag">Incident Management</span><span class="tag">Ticket Governance</span><span class="tag">SLA Awareness</span><span class="tag">Escalation Handling</span></div>
    </article>
 
    <article class="card">
     <div class="number">04 / PROBLEM SOLVING</div>
-    <h3>Root Cause & Resolution</h3>
+    <h3>Root Cause &amp; Resolution</h3>
     <p>Investigating recurring issues, gathering evidence, documenting findings and working towards lasting solutions rather than temporary fixes alone.</p>
     <div class="tags"><span class="tag">Root Cause Analysis</span><span class="tag">Problem Management</span><span class="tag">Knowledge Articles</span><span class="tag">Preventive Support</span></div>
    </article>
 
    <article class="card">
     <div class="number">05 / HEALTHCARE OPERATIONS</div>
-    <h3>Healthcare & Business Applications</h3>
+    <h3>Healthcare &amp; Business Applications</h3>
     <p>Supporting business-critical healthcare applications and helping users resolve operational issues while following established processes.</p>
     <div class="tags"><span class="tag">Healthcare Support</span><span class="tag">Business Applications</span><span class="tag">User Assistance</span><span class="tag">Process Adherence</span></div>
    </article>
 
    <article class="card">
-    <div class="number">06 / ACCESS & SYSTEMS</div>
-    <h3>User Access & System Support</h3>
+    <div class="number">06 / ACCESS &amp; SYSTEMS</div>
+    <h3>User Access &amp; System Support</h3>
     <p>Assisting with user access requests, account-related troubleshooting and system support in line with approved procedures.</p>
     <div class="tags"><span class="tag">Active Directory</span><span class="tag">Microsoft 365</span><span class="tag">Access Troubleshooting</span><span class="tag">Azure</span></div>
    </article>
@@ -586,6 +599,15 @@ footer {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Keep the active tab visible in the scrollable mobile menu */
+(function () {
+  var nav = document.querySelector("nav");
+  var active = nav && nav.querySelector("a.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+  }
+})();
 </script>
 </body>
 </html>
