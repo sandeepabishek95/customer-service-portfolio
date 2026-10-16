@@ -30,15 +30,22 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   background: radial-gradient(ellipse at 80% 5%, rgba(63,83,125,.18), transparent 35%), var(--bg);
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.7;
   overflow-wrap: break-word;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -89,6 +96,7 @@ header {
 }
 
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
@@ -110,8 +118,9 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
-  color: var(--gold-light);
+nav a.active,
+nav a[aria-current="page"] {
+  color: var(--gold);
 }
 
 nav a:focus-visible,
@@ -194,17 +203,14 @@ h3 {
   transition: transform .2s ease, border-color .2s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
 .btn-primary {
   background: var(--gold);
   color: #111625;
 }
 
 .btn-secondary {
-  border: 1px solid var(--line);
+  color: var(--gold);
+  border: 1px solid rgba(217,183,120,.55);
 }
 
 .availability {
@@ -510,10 +516,6 @@ section {
   transition: border-color .2s ease;
 }
 
-.contact-links a:hover {
-  border-color: var(--gold);
-}
-
 .contact-links span {
   color: var(--gold);
   margin-right: 9px;
@@ -533,6 +535,18 @@ footer {
   justify-content: space-between;
   gap: 15px;
   flex-wrap: wrap;
+}
+
+/* HOVER EFFECTS ONLY ON DEVICES WITH A MOUSE (no sticky hover on touch screens) */
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .contact-links a:hover {
+    border-color: var(--gold);
+  }
 }
 
 /* TABLETS AND SMALL LAPTOPS */
@@ -965,7 +979,7 @@ footer {
 
 <section>
   <div class="section-heading">
-    <div class="eyebrow">04 / Education & languages</div>
+    <div class="eyebrow">04 / Education &amp; languages</div>
     <h2>A foundation in service.</h2>
   </div>
 
@@ -973,11 +987,11 @@ footer {
     <article class="card education-card">
       <div class="eyebrow">Education</div>
       <strong>B.Sc. Hospitality and Hotel Management</strong>
-      <p>Asan Memorial College of Arts & Science, Chennai</p>
+      <p>Asan Memorial College of Arts &amp; Science, Chennai</p>
     </article>
     <article class="card education-card">
       <div class="eyebrow">Languages</div>
-      <strong>English & Tamil</strong>
+      <strong>English &amp; Tamil</strong>
       <p>English — Professional proficiency<br>Tamil — Native proficiency</p>
     </article>
   </div>
@@ -1013,6 +1027,15 @@ footer {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Keep the active tab visible in the scrollable mobile menu */
+(function () {
+  var nav = document.querySelector("nav");
+  var active = nav && nav.querySelector("a.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+  }
+})();
 </script>
 </body>
 </html>
